@@ -3,6 +3,7 @@ const menuToggleButton = document.getElementById("toggleMenu");
 const menu = document.getElementById("menu");
 const menuList = document.getElementById("menu-list");
 const menuListItems = document.querySelectorAll(".menu-item");
+const heroName = document.querySelector(".hero-name");
 
 // Theme State
 let isDarkMode = false;
@@ -25,3 +26,15 @@ menuToggleButton.addEventListener("click", () => {
     });
   }
 });
+
+const typewriter = new Typewriter(heroName, {
+  loop: false,
+  delay: "natural",
+});
+
+typewriter
+  .typeString("Christian Fugraino")
+  .pauseFor(1000)
+  .deleteChars(5)
+  .typeString("arino")
+  .start();

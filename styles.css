@@ -35,6 +35,13 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.section-tag {
+  font-family: "Kalam", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--gray-light);
+}
+
 /* nav */
 nav {
   display: flex;
@@ -186,4 +193,140 @@ nav {
 
 .menu-item__btn:hover {
   color: var(--orange);
+}
+/* nav */
+
+/* about me */
+.hero-grid {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.hero-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+  margin-right: 1.5rem;
+}
+
+.hero-socials button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 13px;
+  background-color: transparent;
+}
+
+.hero-socials svg {
+  fill: var(--gray);
+  transition: all 0.1s ease;
+}
+.hero-socials svg:hover {
+  fill: var(--orange);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  max-width: 635px;
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: var(--blue-dark-1);
+  z-index: -1;
+}
+
+.hero-text h2 {
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-weight: 500;
+  color: var(--gray-dark);
+}
+
+.hero-text p {
+  font-size: clamp(0.9rem, 1.3vw, 1.2rem);
+  margin-top: 0.6rem;
+  color: var(--gray);
+}
+
+.hero-text button {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  width: 9vw;
+  max-width: 9rem;
+  min-width: 7rem;
+  padding: 0.5rem 0;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #fff;
+  background-color: var(--blue-dark-1);
+  border: 2px solid var(--blue-dark-1);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hero-text button:hover {
+  background-color: transparent;
+  color: var(--blue-dark-1);
+}
+
+.hero-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.hero-img svg {
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+  margin: 3.9rem 0;
+  margin-right: 2rem;
+}
+
+#monitorTheme {
+  fill: #4e6576;
+}
+
+#frame1 {
+  animation: frame1 1s infinite;
+}
+@keyframes frame1 {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#frame2 {
+  animation: frame2 1s infinite;
+}
+@keyframes frame2 {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
