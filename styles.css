@@ -611,7 +611,7 @@ nav {
 
 .contact aside {
   position: absolute;
-  right: -1rem;
+  right: 5px;
   bottom: -3rem;
   display: flex;
   flex-direction: column;
@@ -713,4 +713,36 @@ nav {
 .contact-button button:hover {
   background-color: transparent;
   color: var(--orange);
+}
+/* contact */
+
+/* footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+footer aside {
+  font-size: 0.8rem;
+  color: var(--gray-dark);
+  position: relative;
+  top: 6px;
+}
+
+footer aside a {
+  cursor: pointer;
+}
+
+footer aside a:hover {
+  color: #000;
+}
+
+footer span {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--orange);
+  padding-top: 4px;
+  margin-left: 25px;
 }
