@@ -35,6 +35,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+section {
+  margin-bottom: 1rem;
+}
+
 .section-tag {
   font-family: "Kalam", sans-serif;
   font-weight: 300;
@@ -329,4 +333,115 @@ nav {
   100% {
     opacity: 0;
   }
+}
+/* about me */
+
+/* projects */
+.industrial-tomb {
+  display: flex;
+  height: 22rem;
+  background-color: #252525;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  margin: 2rem 2rem 2rem 5rem;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+.industrial-tomb__text {
+  width: 50%;
+  color: #fff;
+  padding: 0 2rem;
+  padding-right: 0;
+}
+
+.industrial-tomb__text h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 5px 5px black;
+}
+
+.industrial-tomb__text h4 {
+  color: rgb(235, 235, 24);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.industrial-tomb__text h5 {
+  font-size: 0.7rem;
+}
+
+.industrial-tomb__text a {
+  font-size: 0.7rem;
+  color: rgb(220, 220, 220);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.industrial-tomb__text a:hover {
+  color: rgb(235, 235, 24);
+}
+
+.industrial-tomb__text ul {
+  padding-left: 1rem;
+  font-size: 0.7rem;
+  line-height: 15px;
+  margin: 1rem 0;
+  color: rgb(220, 220, 220);
+}
+
+.industrial-tomb__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+
+.industrial-tomb__buttons button {
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(220, 220, 220);
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.4rem;
+  box-shadow: 1px 1px 0px 0px #000, 2px 2px 0px 0px #000, 3px 3px 0px 0px #000, 4px 4px 0px 0px #000,
+    5px 5px 0px 0px #000;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border-color: #000;
+  background-color: rgb(51, 51, 51);
+}
+
+.industrial-tomb__buttons button:first-child {
+  margin-right: 25px;
+}
+
+.industrial-tomb__buttons button:hover {
+  color: #fff;
+}
+
+.industrial-tomb__buttons button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+.industrial-tomb__visuals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.industrial-tomb__visuals video {
+  border-radius: 10px;
+  width: 90%;
+  max-width: 480px;
 }
