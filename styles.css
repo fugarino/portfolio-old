@@ -445,3 +445,123 @@ nav {
   width: 90%;
   max-width: 480px;
 }
+
+@media screen and (min-width: 1700px) {
+  .industrial-tomb {
+    margin-left: 17rem;
+  }
+
+  .industrial-tomb__text {
+    width: 57%;
+  }
+
+  .industrial-tomb__visuals {
+    width: 43%;
+  }
+}
+
+.pikachu {
+  display: flex;
+  height: 22rem;
+  background-color: #ffe62d;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  margin: 2rem 5rem 2rem 2rem;
+}
+
+.pikachu__text {
+  width: 50%;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.pikachu__text .pokemon-logo {
+  width: 150px;
+  pointer-events: none;
+}
+
+.pikachu__text h4 {
+  margin: 3rem 0;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--blue-dark-1);
+}
+
+.pikachu__text a {
+  font-weight: 700;
+  color: #797690;
+  cursor: pointer;
+}
+
+.pikachu__text a:hover {
+  color: #435891;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  top: 130px;
+  width: 90px;
+  transform: rotate(-20deg);
+  pointer-events: none;
+}
+
+.pikachu__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.pikachu__buttons button {
+  padding: 0.5rem;
+  border: 2.5px solid #435891;
+  border-radius: 5px;
+  box-shadow: -3px 3px #88b7d1;
+  background-color: #f2c444;
+  color: #435891;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.pikachu__buttons button:first-child {
+  margin-right: 30px;
+}
+
+.pikachu__buttons button:active {
+  transform: translateX(-3px) translateY(3px);
+  box-shadow: none;
+}
+
+.pikachu__buttons button:hover {
+  color: #29375b;
+}
+
+.pikachu__visuals {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pikachu__visuals img {
+  width: 90%;
+  border-radius: 10px;
+  pointer-events: none;
+  max-width: 480px;
+}
+
+@media screen and (min-width: 1700px) {
+  .pikachu {
+    margin-right: 17rem;
+  }
+
+  .pikachu__text {
+    width: 57%;
+  }
+
+  .pikachu__visuals {
+    width: 43%;
+  }
+}
