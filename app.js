@@ -5,7 +5,8 @@ const menuList = document.getElementById("menu-list");
 const menuListItems = document.querySelectorAll(".menu-item");
 const heroName = document.querySelector(".hero-name");
 
-// Theme State
+// State
+let isMenuOpen = false;
 let isDarkMode = false;
 
 // Functions
@@ -18,12 +19,28 @@ menuToggleButton.addEventListener("click", () => {
     menuListItems.forEach((item) => {
       item.classList.add("menu-list-item__visible");
     });
+    isMenuOpen = true;
   } else {
     menuList.classList.remove("menu-list__expanded");
     menuList.classList.add("menu-list__hidden");
     menuListItems.forEach((item) => {
       item.classList.remove("menu-list-item__visible");
     });
+    isMenuOpen = false;
+  }
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && isMenuOpen) {
+    menu.classList.remove("menu-expanded");
+    menuToggleButton.classList.remove("open");
+    console.log("hello world");
+    menuList.classList.remove("menu-list__expanded");
+    menuList.classList.add("menu-list__hidden");
+    menuListItems.forEach((item) => {
+      item.classList.remove("menu-list-item__visible");
+    });
+    isMenuOpen = false;
   }
 });
 
