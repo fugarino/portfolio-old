@@ -5,9 +5,8 @@
 }
 
 :root {
-  /* COLORS */
-  /* LIGHT MODE */
-  --background-light: #fff;
+  --background: #fff;
+  /* test */
   --blue-dark-0: #2b2936;
   --blue-dark-1: #3a3847;
   --gray-dark: #5e5e5e;
@@ -24,6 +23,10 @@
   --blue-light: #f5f9fa;
 }
 
+.darkmode {
+  --background: #38383c;
+}
+
 body {
   padding: 0 2rem;
   margin: 0 auto;
@@ -33,6 +36,8 @@ body {
   max-width: 1800px;
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
+  /* background-color: #38383c; */
+  background-color: var(--background);
 }
 
 section {
@@ -94,7 +99,7 @@ nav {
   height: 100vh;
   padding: 0.52rem 4rem;
   max-width: 1800px;
-  background-color: var(--background-light);
+  background-color: var(--background);
   transition: background-color 0.3s ease;
   z-index: 99;
 }

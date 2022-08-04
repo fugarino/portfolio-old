@@ -4,10 +4,10 @@ const menu = document.getElementById("menu");
 const menuList = document.getElementById("menu-list");
 const menuListItems = document.querySelectorAll(".menu-item");
 const heroName = document.querySelector(".hero-name");
+const darkModeToggle = document.getElementById("darkModeBtn");
 
 // State
 let isMenuOpen = false;
-let isDarkMode = false;
 
 // Typewriter
 const typewriter = new Typewriter(heroName, {
@@ -23,6 +23,30 @@ typewriter
   .start();
 
 // Functions
+const detectInitialTheme = () => {
+  let theme = "light";
+  if (localStorage.getItem("theme")) {
+    if (localStorage.getItem("theme") === "dark") theme = "dark";
+  } else if (!window.matchMedia) return false;
+  else if (window.matchMedia("(prefers-color-scheme: dark)").matches) theme = "dark";
+
+  if (theme === "dark") {
+    document.body.classList.add("darkmode");
+  }
+};
+detectInitialTheme();
+
+const switchTheme = () => {
+  if (document.body.classList.contains("darkmode")) {
+    document.body.classList.remove("darkmode");
+    localStorage.setItem("theme", "light");
+  } else {
+    document.body.classList.add("darkmode");
+    localStorage.setItem("theme", "dark");
+  }
+  closeMenu();
+};
+
 const openMenu = () => {
   menuList.classList.remove("menu-list__hidden");
   menuList.classList.add("menu-list__expanded");
@@ -38,6 +62,8 @@ const closeMenu = () => {
   menuListItems.forEach((item) => {
     item.classList.remove("menu-list-item__visible");
   });
+  menu.classList.remove("menu-expanded");
+  menuToggleButton.classList.remove("open");
   isMenuOpen = false;
 };
 
@@ -49,9 +75,7 @@ menuToggleButton.addEventListener("click", () => {
 });
 
 window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && isMenuOpen) {
-    menu.classList.remove("menu-expanded");
-    menuToggleButton.classList.remove("open");
-    closeMenu();
-  }
+  if (e.key === "Escape" && isMenuOpen) closeMenu();
 });
+
+darkModeToggle.addEventListener("click", switchTheme);
