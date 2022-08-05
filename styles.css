@@ -6,6 +6,13 @@
 
 :root {
   --background: #fff;
+  --main-text: #3a3847;
+  --main-text-light: #5e5e5e;
+  --main-text-lightest: #808080;
+  --social-links-hover: #000;
+  --monitor-theme: #fff;
+  --skill-icon: #3a3847;
+  --plane-shadow: #999999;
   /* test */
   --blue-dark-0: #2b2936;
   --blue-dark-1: #3a3847;
@@ -20,11 +27,18 @@
   --orange-light-1: #ffe5d4;
   --orange-light-2: #fff9f4;
   --blue: #c8dee6;
-  --blue-light: #f5f9fa;
+  --blue-light: #fcfcfc;
 }
 
 .darkmode {
   --background: #38383c;
+  --main-text: #ffffff;
+  --main-text-light: #e1e1e1;
+  --main-text-lightest: #c9c9c9;
+  --social-links-hover: #fff;
+  --monitor-theme: #4e6576;
+  --skill-icon: #f5f5f5;
+  --plane-shadow: #000;
 }
 
 .scroll-bar {
@@ -40,7 +54,6 @@ body {
   max-width: 1800px;
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
-  /* background-color: #38383c; */
   background-color: var(--background);
 }
 
@@ -79,7 +92,7 @@ nav {
 .nav-links {
   font-size: 0.8rem;
   margin-left: 20px;
-  color: var(--gray-dark);
+  color: var(--main-text-light);
   position: relative;
   top: 6px;
 }
@@ -89,7 +102,7 @@ nav {
   transition: color 0.1s ease;
 }
 .nav-link:hover {
-  color: #000;
+  color: var(--social-links-hover);
 }
 
 /* menu logic */
@@ -122,7 +135,7 @@ nav {
   text-align: right;
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--blue-dark-1);
+  color: var(--main-text);
   transform: translateX(-40px);
 }
 .menu-list-item__hidden {
@@ -171,7 +184,7 @@ nav {
 .menu-button::after {
   content: "";
   display: inline-block;
-  background-color: var(--blue-dark-1);
+  background-color: var(--main-text);
   width: 30px;
   height: 4px;
   border-radius: 5px;
@@ -200,7 +213,7 @@ nav {
   font-weight: 600;
   background-color: transparent;
   border: none;
-  color: var(--blue-dark-1);
+  color: var(--main-text);
   transition: color 0.1s ease;
 }
 
@@ -235,7 +248,7 @@ nav {
 }
 
 .hero-socials svg {
-  fill: var(--gray);
+  fill: var(--main-text-lightest);
   transition: all 0.1s ease;
 }
 .hero-socials svg:hover {
@@ -253,25 +266,25 @@ nav {
 
 .hero-text h1 {
   font-size: clamp(2.5rem, 4vw, 4rem);
-  color: var(--blue-dark-1);
+  color: var(--main-text);
   z-index: -1;
 }
 
 .hero-text h2 {
   font-size: clamp(1.25rem, 2vw, 2rem);
   font-weight: 500;
-  color: var(--gray-dark);
+  color: var(--main-text-light);
 }
 
 .hero-text p {
   font-size: clamp(0.9rem, 1.3vw, 1.2rem);
   margin-top: 0.6rem;
-  color: var(--gray);
+  color: var(--main-text-lightest);
 }
 
 .hero-text button {
   font-family: "Poppins", sans-serif;
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: clamp(0.8rem, 1.1vw, 1rem);
   width: 9vw;
   max-width: 9rem;
   min-width: 7rem;
@@ -279,15 +292,15 @@ nav {
   border-radius: 10px;
   margin-top: 20px;
   cursor: pointer;
-  color: #fff;
-  background-color: var(--blue-dark-1);
-  border: 2px solid var(--blue-dark-1);
+  color: var(--main-text);
+  background-color: var(--background);
+  border: 2px solid var(--main-text);
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .hero-text button:hover {
-  background-color: transparent;
-  color: var(--blue-dark-1);
+  background-color: var(--main-text);
+  color: var(--background);
 }
 
 .hero-img {
@@ -306,7 +319,7 @@ nav {
 }
 
 #monitorTheme {
-  fill: #4e6576;
+  fill: var(--monitor-theme);
 }
 
 #frame1 {
@@ -493,7 +506,7 @@ nav {
   margin: 3rem 0;
   font-size: 2rem;
   text-align: center;
-  color: var(--blue-dark-1);
+  color: #3a3847;
 }
 
 .pikachu__text a {
@@ -607,6 +620,10 @@ nav {
   font-size: 0.9rem;
   font-weight: 500;
 }
+
+.next-icon {
+  fill: var(--skill-icon);
+}
 /* skills */
 
 /* contact */
@@ -638,7 +655,7 @@ nav {
 }
 
 .contact aside svg {
-  fill: var(--gray);
+  fill: var(--main-text-lightest);
   transition: all 0.1s ease;
 }
 
@@ -692,7 +709,7 @@ nav {
 }
 
 .contact-text h2 {
-  color: var(--blue-dark-1);
+  color: #3a3847;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -725,7 +742,7 @@ nav {
 }
 
 .plane-shadow {
-  fill: #999999;
+  fill: var(--plane-shadow);
   opacity: 0.5;
 }
 
@@ -776,7 +793,7 @@ footer {
 
 footer aside {
   font-size: 0.8rem;
-  color: var(--gray-dark);
+  color: var(--main-text-light);
   position: relative;
   top: 6px;
 }
@@ -786,7 +803,7 @@ footer aside a {
 }
 
 footer aside a:hover {
-  color: #000;
+  color: var(--social-links-hover);
 }
 
 footer span {
