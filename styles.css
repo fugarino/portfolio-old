@@ -27,6 +27,10 @@
   --background: #38383c;
 }
 
+.scroll-bar {
+  color-scheme: dark;
+}
+
 body {
   padding: 0 2rem;
   margin: 0 auto;

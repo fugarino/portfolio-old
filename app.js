@@ -32,6 +32,8 @@ const detectInitialTheme = () => {
 
   if (theme === "dark") {
     document.body.classList.add("darkmode");
+    document.documentElement.classList.add("scroll-bar");
+    darkModeToggle.textContent = "Light Mode";
   }
 };
 detectInitialTheme();
@@ -39,9 +41,13 @@ detectInitialTheme();
 const switchTheme = () => {
   if (document.body.classList.contains("darkmode")) {
     document.body.classList.remove("darkmode");
+    document.documentElement.classList.remove("scroll-bar");
+    darkModeToggle.textContent = "Dark Mode";
     localStorage.setItem("theme", "light");
   } else {
     document.body.classList.add("darkmode");
+    document.documentElement.classList.add("scroll-bar");
+    darkModeToggle.textContent = "Light Mode";
     localStorage.setItem("theme", "dark");
   }
   closeMenu();
