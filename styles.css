@@ -41,6 +41,10 @@
   --plane-shadow: #000;
 }
 
+/* html {
+  scroll-behavior: smooth;
+} */
+
 .scroll-bar {
   color-scheme: dark;
 }
@@ -211,6 +215,7 @@ nav {
   font-family: "Poppins";
   font-size: 1.4rem;
   font-weight: 600;
+  text-decoration: none;
   background-color: transparent;
   border: none;
   color: var(--main-text);
@@ -285,6 +290,7 @@ nav {
 .hero-text button {
   font-family: "Poppins", sans-serif;
   font-size: clamp(0.8rem, 1.1vw, 1rem);
+  font-weight: 500;
   width: 9vw;
   max-width: 9rem;
   min-width: 7rem;

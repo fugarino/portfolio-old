@@ -6,6 +6,16 @@ const menuListItems = document.querySelectorAll(".menu-item");
 const heroName = document.querySelector(".hero-name");
 const darkModeToggle = document.getElementById("darkModeBtn");
 
+const aboutBtn = document.getElementById("aboutBtn");
+const projectsBtn = document.getElementById("projectsBtn");
+const skillsBtn = document.getElementById("skillsBtn");
+const contactBtn = document.getElementById("contactBtn");
+
+const aboutSection = document.getElementById("aboutMe");
+const projectsSection = document.getElementById("projects");
+const skillsSection = document.getElementById("skills");
+const contactSection = document.getElementById("contact");
+
 // State
 let isMenuOpen = false;
 
@@ -38,18 +48,22 @@ const detectInitialTheme = () => {
 };
 detectInitialTheme();
 
+const switchToLight = () => {
+  document.body.classList.remove("darkmode");
+  document.documentElement.classList.remove("scroll-bar");
+  darkModeToggle.textContent = "Dark Mode";
+  localStorage.setItem("theme", "light");
+};
+
+const switchToDark = () => {
+  document.body.classList.add("darkmode");
+  document.documentElement.classList.add("scroll-bar");
+  darkModeToggle.textContent = "Light Mode";
+  localStorage.setItem("theme", "dark");
+};
+
 const switchTheme = () => {
-  if (document.body.classList.contains("darkmode")) {
-    document.body.classList.remove("darkmode");
-    document.documentElement.classList.remove("scroll-bar");
-    darkModeToggle.textContent = "Dark Mode";
-    localStorage.setItem("theme", "light");
-  } else {
-    document.body.classList.add("darkmode");
-    document.documentElement.classList.add("scroll-bar");
-    darkModeToggle.textContent = "Light Mode";
-    localStorage.setItem("theme", "dark");
-  }
+  document.body.classList.contains("darkmode") ? switchToLight() : switchToDark();
   closeMenu();
 };
 
@@ -74,6 +88,18 @@ const closeMenu = () => {
 };
 
 // EventListeners
+const scrollFromTo = (button, section) => {
+  button.addEventListener("click", () => {
+    closeMenu();
+    section.scrollIntoView({ behavior: "smooth" });
+  });
+};
+
+scrollFromTo(aboutBtn, aboutSection);
+scrollFromTo(projectsBtn, projectsSection);
+scrollFromTo(skillsBtn, skillsSection);
+scrollFromTo(contactBtn, contactSection);
+
 menuToggleButton.addEventListener("click", () => {
   menu.classList.toggle("menu-expanded");
   menuToggleButton.classList.toggle("open");
